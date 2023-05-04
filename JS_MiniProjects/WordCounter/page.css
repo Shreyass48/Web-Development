@@ -1,0 +1,24 @@
+body{
+    padding: 50px 100px;
+}
+h1{
+    text-align: center;
+    background-color: brown;
+    color: whitesmoke;
+    padding: 5px;
+    margin: 0px;
+}
+textarea{
+    width: 1058px;
+    border-color: brown;
+    font-size: 15px;
+}
+p{
+    text-align: center;
+    background-color: brown;
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: bold;
+    padding : 10px;
+    margin : 0px
+}

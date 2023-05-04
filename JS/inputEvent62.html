@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid 62</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="myIp">
+    </form>
+
+    <script>
+        let x = document.getElementById("myIp");
+
+        // it chk textbox is focus(user typeing) or blur(user not typing)
+        x.addEventListener('focus',myFocus);
+        x.addEventListener('blur',myBlur);
+        function myFocus()
+        {
+            x.style.background = "yellow";
+        }
+        function myBlur()
+        {
+            x.style.background = "white";
+        }
+
+        // detect changes of values in textbox
+        x.addEventListener('change',function(){
+            console.log(this.value);
+        })
+        x.addEventListener('input',function(){   //it detects live
+            console.log(this.value);
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid 45-46</title>
+</head>
+<body>
+    <div id = "temp">
+        <p>This is paragraph</p>
+    </div>
+
+    <ul id = "list">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
+
+    <script>
+        // Insert new tag 
+        let ele = document.getElementById("temp");
+
+        let h1 = document.createElement('h1');  // creating tag
+        h1.textContent = "This is h1 tagg"; // add text using characteristic
+        
+        h1.className = "tp";    // add classname
+        h1.id = "one";          // Add id
+        
+        //let text = document.createTextNode("This is h1 tag");  // entering txt into it
+        //h1.append(text);    // add text in tag
+        
+        ele.append(h1);     // add tag into seleted element ie DIV
+
+        // insert tag before
+        let prnt = document.getElementById("list"); //parent
+        let pos = prnt.firstElementChild.nextElementSibling;
+
+        let item = document.createElement("li");
+        item.textContent = "listX";
+
+        prnt.insertBefore(item, pos);
+
+
+    </script>
+</body>
+</html>

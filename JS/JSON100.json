@@ -1,0 +1,17 @@
+{
+    "students" : [
+        {
+            "cmt" : "this is how we created JSON",
+            "name" : "shreyas",
+            "age" : 32
+        },
+        {
+            "name" : "suraj",
+            "age" : 23
+        },
+        {
+            "name" : "abc",
+            "age" : 34
+        }
+    ]
+}

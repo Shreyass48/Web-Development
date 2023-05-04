@@ -1,0 +1,53 @@
+<!--   Event Bubbling : 
+    event starts at most specific element, and then goes upward to least.(child to parent)
+    like first  button -> div -> body -> html -> document.
+
+    Event Capturing : 
+    it just reverse of Bubling  (parent to child)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid 63</title>
+    <style>
+        body{
+            padding: 100px;
+            color: antiquewhite;
+        }
+        #div1{
+            padding: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+    <button id="btn">
+        click me!
+    </button>
+    </div>
+    <script>
+        let d = document.getElementById("div1");
+        let b = document.getElementById("btn");
+
+        // if 3rd para is true the capturing happens else bubbling(by defalut bubbling)
+        b.addEventListener('click',btnClick);
+        d.addEventListener('click',divClick);
+        document.body.addEventListener('click',bodyClick,true);
+
+        function btnClick(event){
+            console.log("button clicked");
+        }
+        function divClick(){
+            console.log("div clicked");
+        }
+        function bodyClick(){
+            console.log("body clicked");
+        }
+    </script>
+</body>
+</html>

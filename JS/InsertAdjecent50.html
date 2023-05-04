@@ -1,0 +1,39 @@
+<!-- 
+    We can add element in 4 diffrent position using INSERT ADJECENT 
+    1. before begin
+    2. before end
+    3. after begin
+    4. after end
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid 50-51</title>
+</head>
+<body>
+   <div id="temp">      <!-- targeted -->
+        <h2>heading 2</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button id = "submit">SUBMIT</button>
+    </div>
+
+    <script>
+        let ele = document.getElementById("temp");
+        let text = "<h1> Head 1</h1>"
+        ele.insertAdjacentHTML('beforeend',text) // 1: pos, 2: text
+
+        // change attr
+        let btn = document.getElementById("submit");
+        btn.setAttribute("class","form");  // setting class to form
+        let ans = btn.getAttribute("class"); // getting classname
+        console.log(ans);
+        btn.removeAttribute("class"); //remove class attr
+        console.log(btn.hasAttribute("class")); // chk attr has assignd or not
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid 52-53-54-55</title>
+    <style>
+        #submit2{
+            background-color: brown;
+            color: white;
+        }
+
+        .color{
+            color: blue;
+            background-color: green;
+        }
+        .dim{
+            border: 1px solid red;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id = "submit" style="color : yellow">SUBMIT</button>
+
+    <button id = "submit2">Done</button><br><br>
+
+    <div id="box" class="color">
+        <p>This is text</p>
+    </div>
+
+    <script>
+        let btn = document.getElementById("submit");
+        //// setting CSS style ////
+        // btn.style.cssText = "background-color : red;";  // it override old property
+        // so use +=
+        btn.style.cssText += "background-color : red;";
+        
+        //// get computer css style ////
+        let css = getComputedStyle(submit2);
+        console.log(css);
+
+        //// manipulate class of css /////
+        let box = document.getElementById("box");
+        console.log(box.className);
+
+        // add, remove class
+        box.classList.add("dim");
+        box.classList.remove("dim");
+        box.classList.replace("color","dim"); //replace dim with color
+        // chk class is present or not
+        console.log(box.classList.contains("color"));
+
+        //chk height width
+        console.log(box.offsetHeight);
+        console.log(box.offsetWidth);
+
+    </script>
+</body>
+</html>

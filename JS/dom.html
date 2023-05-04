@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_tut38-42</title>
+</head>
+<body>
+    <ul>
+        <li class = "cl">one</li>
+        <li id = 2>two</li>
+        <li class= "cl">three</li>
+    </ul>
+
+    <h2>Head1</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, neque.</p>
+    <div id = "div1">
+    <h2>Head2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, aspernatur?</p>
+    <h2>Head3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nobis? Eligendi, iste? </p>
+    </div>
+
+    <script>
+        // using ID
+        // let ele = document.getElementById(2);
+        // console.log(ele.innerHTML);
+        // ele.innerHTML = "Second";
+        // console.log(ele.innerHTML);
+
+        // using class
+        // let ele = document.getElementsByClassName("cl");
+        // console.log(ele); // 2len coz there are 2 obj of class cl
+        // for(let i = 0; i < ele.length; i++)
+        // {
+        //     ele[i].innerHTML = "DJ"; 
+        // }
+
+        //using tagname (we are chnging h2 under div tag)
+        // let div1 = document.getElementById("div1");
+        // let ele = div1.getElementsByTagName("h2");
+        // for(let i = 0; i < ele.length; i++)
+        // {
+        //     ele[i].innerHTML = "HEHE!";
+        // }
+
+        //QuerySelector (powerfull)
+        let ele = document.querySelector("li.cl");  // it select only first ele and break
+        console.log(ele);
+
+        let elee = document.querySelectorAll("li.cl"); //it select all & make list
+        console.log(elee);
+
+
+    </script>
+</body>
+</html>

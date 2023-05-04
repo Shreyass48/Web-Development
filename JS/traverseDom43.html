@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_tut43</title>
+   
+</head>
+<body>
+    <ul>
+        <li id = "temp">list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+
+    <ul id = "tp">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+
+    <script>
+        // selecting ul by its child
+        let ele = document.getElementById("temp");
+        let prt = ele.parentElement;
+        console.log(prt);
+        
+        // vice versa
+        let ele2 = document.getElementById("tp");
+        let cld1 = ele.firstChild;   //list1
+        let cld2 = ele.lastChild;   //list3
+        
+        let cld = ele.children;         // all list (arr)
+        
+        // selecting siblings
+        let ele3 = document.getElementById("temp");
+        let sib1 = ele3.previousElementSibling;
+        let sib2 = ele3.nextElementSibling;
+        console.log(sib2);
+
+
+    </script>
+</body>
+</html>

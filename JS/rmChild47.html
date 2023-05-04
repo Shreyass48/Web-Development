@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid 47-48-49</title>
+</head>
+<body>
+    <ul id = "menu">
+        <li>abc</li>
+        <li>def</li>
+        <li>ghi</li>
+    </ul>
+
+    <script>
+        //// Remove child  //////
+        let prent = document.getElementById("menu");
+        let ele = prent.firstElementChild.nextElementSibling;
+
+        // prent.removeChild(ele);  // it remove def
+
+       // document.body.removeChild(prent);  //remove ul
+
+       //// clone ///////
+       let menu = document.getElementById("menu");
+       let clonee = menu.cloneNode(true);  // if you want only parent then put false
+       clonee.id = "abc";
+
+       document.body.appendChild(clonee);  // adding clone 
+
+       ////// replace //////
+       let parent = document.getElementById("menu");
+
+       let element = document.createElement("li");  //creating ele
+       element.textContent = "jkl";
+
+       let replace = parent.firstElementChild.nextElementSibling;  //postion selecting where replace,ent happens
+       
+       parent.replaceChild(element, replace);
+    </script>
+</body>
+</html>

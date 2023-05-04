@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid 67-68-69-70</title>
+</head>
+<body>
+
+    <button id="abc" onclick="fun()">Redirect</button>
+
+    <script>
+        // wait for particular time & then execute
+        //setTimeout(myFun, 5000);  //1. funNmae, 2: miisec
+        function myFun(){
+            console.log("please subs!");
+        }
+
+        // print data after particular time intervals
+        //setInterval(myFun2, 2000);
+        function myFun2(){
+            console.log("please subs!");
+        }
+
+        //////////////////////////////////////////////////////////////////
+        //Location object (use : find location, redirect to another page)
+        // find info about webpage
+        console.log(location.href);
+        console.log(location.pathname);
+        console.log(location.protocol);
+
+        // redirecting
+        function fun(){
+            // History saved
+            window.location = "https://www.youtube.com";  //method1
+            location.href = "https://www.youtube.com";  //method2
+            location.assign = "https://www.youtube.com";  //method3 (internally these method call for method1,2)
+
+            // History not saved
+            location.replace("https://www.youtube.com");
+
+            // Reload
+            location.reload();
+        }
+
+        ////////////////////////////////////////////////////////////////////
+        // Navigator obj : to detect brower info (from which brower website gets loded more)
+
+        console.log(navigator.appName);
+        console.log(navigator.appVersion);
+        console.log(navigator.appCodeName);
+        console.log(navigator.cookieEnabled);
+        console.log(navigator.userAgent);
+        console.log(navigator.platform);
+
+        console.log(navigator.javaEnabled());
+        ///////////////////////////////////////////////////////////////////
+        // Screen Obj : info abt current screen
+
+        console.log(screen.width);
+        console.log(screen.height);
+        console.log(screen.colorDepth);
+        console.log(screen.orientation);
+
+    </script>
+</body>
+</html>
